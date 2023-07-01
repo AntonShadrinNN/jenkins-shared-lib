@@ -1,9 +1,8 @@
 import groovy.io.FileType
 
-class ShellScripts {
-    String dir = '/var/lib'
+class ListAll {
 
-    def ls () {
+    def ls (String dir) {
         def res = []
         File root = new File(dir)
         root.eachFileRecurse(FileType.FILES) { file ->
