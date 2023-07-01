@@ -1,3 +1,5 @@
+package com.example
+
 import groovy.io.FileType
 
 class ListAll {
