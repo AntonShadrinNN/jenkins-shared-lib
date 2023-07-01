@@ -1,11 +1,15 @@
 import groovy.io.FileType
 
 class ShellScripts {
-    def dir = '/var/lib'
-    def res = []
-    def root = new File(dir)
-    root.eachFileRecurse(FileType.FILES) { file ->
-            dir << file
-    }
+    String dir = '/var/lib'
 
+    def ls () {
+        def res = []
+        File root = new File(dir)
+        root.eachFileRecurse(FileType.FILES) { file ->
+            res << file
+        }
+
+        return res
+    }
 }
